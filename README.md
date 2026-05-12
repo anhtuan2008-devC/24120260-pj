@@ -16,13 +16,19 @@ employee.
 
 ### Setup
 
-1. Install dependencies
+1. Install Firebase CLI globally
+
+```bash
+npm install -g firebase-tools
+```
+
+2. Install project dependencies
 
 ```bash
 npm install
 ```
 
-2. Configure environment variables
+3. Configure environment variables
 
 ```bash
 cp .env.example .env
@@ -45,10 +51,11 @@ Fill in the values in `.env`:
 - `VITE_FIREBASE_APP_ID`
 - `VITE_FIREBASE_MEASUREMENT_ID`
 
-3. Start the dev server
+4. Start the dev server
 
 ```bash
-npm run dev
+npm run build
+firebase deploy
 ```
 
 ### Supabase MCP for VS Code
