@@ -1,0 +1,228 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+/* ── Floating Orbs ── */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+  opacity: 0.5;
+  animation: float 20s infinite alternate ease-in-out;
+}
+
+.orb-1 {
+  width: 400px;
+  height: 400px;
+  background: var(--accent-soft);
+  top: -100px;
+  right: -50px;
+}
+
+.orb-2 {
+  width: 300px;
+  height: 300px;
+  background: var(--secondary-soft);
+  bottom: -50px;
+  left: -50px;
+  animation-delay: -5s;
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 100px); }
+}
+
+.login-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 420px;
+  padding: 40px;
+  background: var(--surface-strong);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: 32px;
+  box-shadow: var(--shadow);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-logo {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--accent), var(--secondary));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 800;
+  border-radius: 16px;
+  margin: 0 auto 20px;
+  box-shadow: 0 8px 20px rgba(30, 58, 138, 0.2);
+}
+
+.login-header h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.login-header p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-error {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--danger);
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid rgba(239, 68, 68, 0.1);
+  animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-left: 4px;
+}
+
+.form-group input {
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  transition: all 200ms;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+.login-submit {
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-submit:hover:not(:disabled) {
+  background: var(--accent-strong);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(30, 58, 138, 0.2);
+}
+
+.login-submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.login-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ── OTP Specific ── */
+
+.otp-info {
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.otp-input {
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  text-align: center;
+  letter-spacing: 0.5em;
+  padding-left: 32px !important;
+}
+
+.back-to-login {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: color 200ms;
+}
+
+.back-to-login:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+.login-footer {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.login-footer p {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

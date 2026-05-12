@@ -1,0 +1,70 @@
+.skeleton-card {
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 240px;
+  animation: fadeUpIn 500ms ease forwards;
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.skeleton-card-header {
+  display: flex;
+}
+
+.skeleton-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, var(--border) 25%, var(--bg) 50%, var(--border) 75%);
+  background-size: 400% 100%;
+  animation: shimmerGradient 1.5s ease-in-out infinite;
+}
+
+.skeleton-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skeleton-line {
+  height: 16px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, var(--border) 25%, var(--bg) 50%, var(--border) 75%);
+  background-size: 400% 100%;
+  animation: shimmerGradient 1.5s ease-in-out infinite;
+}
+
+.skeleton-line.title {
+  height: 22px;
+}
+
+.skeleton-card-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.skeleton-line.short {
+  width: 30%;
+  height: 14px;
+}
+
+/* Shimmer gradient chạy ngang (realistic) */
+@keyframes shimmerGradient {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+@keyframes fadeUpIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

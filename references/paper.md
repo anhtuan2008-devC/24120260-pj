@@ -1,16 +1,16 @@
-# Thực hành Frontend react kết nối với backend supabase 
+# Thực hành Frontend react kết nối với backend supabase
 
 Các bước thực hiện (dùng AI chat để trợ giúp cho các bước chưa biết cách thực hiện)
 
 1. Vào supabase.com đăng kí một account (dùng email cá nhân, không dùng email SV) và tạo một project
 
-2. Tạo bảng Nhân viên (Employee), bổ sung hai cột name và avatar. 
+2. Tạo bảng Nhân viên (employee), bổ sung hai cột name và avatar.
 
-Import bằng csv dữ liệu mẫu. 
+Import bằng csv dữ liệu mẫu.
 
 Add policy cho phép select all.
 
-3. Tạo Storage > Bucket mới với tên avatars. 
+3. Tạo Storage > Bucket mới với tên avatar.
 
 Vào trang uifaces.co, download 30 avatar, và upload lên Bucket vừa tạo.
 

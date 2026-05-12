@@ -40,6 +40,30 @@ Fill in the values in `.env`:
 npm run dev
 ```
 
+### Supabase MCP for VS Code
+
+This repo includes `.vscode/mcp.json` so VS Code MCP-compatible agents can
+connect to the Supabase project used for the exercise:
+
+```json
+{
+  "servers": {
+    "supabase": {
+      "type": "http",
+      "url": "https://mcp.supabase.com/mcp?project_ref=pauqimgtovrfeouvbnte"
+    }
+  }
+}
+```
+
+After opening the repo in VS Code, start or reload the MCP client/agent and
+complete the Supabase OAuth flow in the browser if prompted. Agent skills are
+already recorded in `skills-lock.json`; to reinstall them manually, run:
+
+```bash
+npx skills add supabase/agent-skills
+```
+
 ### Scripts
 
 - `npm run dev` - start dev server

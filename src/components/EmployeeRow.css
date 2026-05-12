@@ -1,0 +1,41 @@
+.row.is-editing {
+  background: rgba(14, 139, 143, 0.04);
+  border-color: rgba(14, 139, 143, 0.2);
+  box-shadow: 0 4px 12px rgba(14, 139, 143, 0.05);
+}
+
+.edit-input {
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-size: 15px;
+  outline: none;
+  transition: all 150ms;
+  background: white;
+}
+
+.edit-input:focus {
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.edit-input:disabled {
+  opacity: 0.6;
+  background: #f3f4f6;
+}
+
+.save-btn {
+  color: var(--accent-strong);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.save-btn:hover:not(:disabled) {
+  background: var(--accent);
+  color: white;
+}
+
+@media (max-width: 960px) {
+  .row {
+    grid-template-columns: 90px minmax(0, 1fr);
+  }
+}
